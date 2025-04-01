@@ -9,7 +9,7 @@ type Project = {
   description: string;
   tags: string[];
   link: string;
-  image: string;
+  image?: string;
 };
 
 const projects: Project[] = [
@@ -27,7 +27,6 @@ const projects: Project[] = [
     description: "A machine learning model that detects Parkinson's disease symptoms by analyzing voice features including tone, jitters, and pitch variations.",
     tags: ["Machine Learning", "Healthcare", "Voice Analysis"],
     link: "https://github.com/aditya10avg/voice_doc",
-    image: "/placeholder.svg",
   },
   {
     id: 3,
@@ -35,7 +34,6 @@ const projects: Project[] = [
     description: "An LLM-powered software that protects users from financial scams by analyzing speech patterns and technical terminology used in conversations.",
     tags: ["LLM", "Security", "Pattern Recognition"],
     link: "https://github.com/aditya10avg/Protect",
-    image: "/placeholder.svg",
   },
   {
     id: 4,
@@ -51,7 +49,6 @@ const projects: Project[] = [
     description: "Using Graph Neural Networks and Message Passing Neural Networks to predict quantum properties of organic molecules, aiding in drug discovery.",
     tags: ["Neural Networks", "Quantum Chemistry", "Drug Discovery"],
     link: "https://github.com/aditya10avg/MPNN-for-Quantum-Biochemistry",
-    image: "/placeholder.svg",
   },
   {
     id: 6,
@@ -59,7 +56,6 @@ const projects: Project[] = [
     description: "An open-source image-to-art generator that transforms images into specific art styles. Gained over 700 users within 24 hours of launch.",
     tags: ["AI", "Image Processing", "Art Generation"],
     link: "https://github.com/aditya10avg/pixie-style-transformer",
-    image: "/placeholder.svg",
   }
 ];
 
@@ -89,38 +85,43 @@ const ProjectsSection = () => {
                 <div 
                   key={project.id}
                   className={cn(
-                    "grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg transition-all",
+                    "rounded-lg transition-all p-6",
+                    project.image ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col",
                     activeProject === project.id ? "bg-card shadow-sm" : "hover:bg-card/50"
                   )}
                   onMouseEnter={() => setActiveProject(project.id)}
                   onMouseLeave={() => setActiveProject(null)}
                 >
-                  <div className="aspect-video bg-muted rounded-md overflow-hidden">
-                    <img 
-                      src={imageError[project.id] ? '/placeholder.svg' : project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover"
-                      onError={() => handleImageError(project.id)}
-                    />
-                  </div>
+                  {project.image && (
+                    <div className="aspect-video bg-muted rounded-md overflow-hidden">
+                      <img 
+                        src={imageError[project.id] ? '/placeholder.svg' : project.image} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover"
+                        onError={() => handleImageError(project.id)}
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-col">
-                    <h3 className="text-lg font-jura font-medium mb-2">{project.title}</h3>
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-lg font-jura font-medium">{project.title}</h3>
+                      <a 
+                        href={project.link} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm font-jura font-medium hover:text-primary/70 transition-colors"
+                      >
+                        View Project <ArrowUpRightIcon className="ml-1 h-4 w-4" />
+                      </a>
+                    </div>
                     <p className="text-muted-foreground mb-4 font-jura">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.map((tag) => (
                         <span key={tag} className="text-xs font-jura px-2 py-1 bg-secondary rounded-full">
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <a 
-                      href={project.link} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-auto inline-flex items-center text-sm font-jura font-medium hover:text-primary/70 transition-colors"
-                    >
-                      View Project <ArrowUpRightIcon className="ml-1 h-4 w-4" />
-                    </a>
                   </div>
                 </div>
               ))}
