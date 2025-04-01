@@ -2,20 +2,20 @@ import { Separator } from "@/components/ui/separator";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-12">
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">About Me</h2>
             <Separator className="w-12" />
           </div>
           
           <div className="lg:col-span-8">
-            <p className="text-lg mb-6 font-jura">
+            <p className="text-lg mb-4 font-jura">
               I'm a Aditya. I love building products that help people.
               I mostly work on AI apps, tools and products with AI capabilities.
             </p>
-            <p className="text-lg mb-6 font-jura">
+            <p className="text-lg mb-4 font-jura">
               I am currently building a startup called Calley AI <a href="https://calleyai.tech" target="_blank" rel="noopener noreferrer">calleyai.tech</a>
               I've worked on many small and large projects. The number goes above 50
             </p>
@@ -24,7 +24,7 @@ const AboutSection = () => {
               you can find me roaming in some random park/garden.
             </p>
             
-            <h3 className="font-jura text-lg mt-12 mb-4">Experience</h3>
+            <h3 className="font-jura text-lg mt-8 mb-3">Experience</h3>
             <div className="space-y-8">
               <div>
                 <div className="flex justify-between items-baseline mb-2">
@@ -45,7 +45,7 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <h3 className="font-jura text-lg mt-12 mb-4">Skills</h3>
+            <h3 className="font-jura text-lg mt-8 mb-3">Skills</h3>
             <div className="flex flex-wrap gap-2">
               {['Python', 'AI agents', 'LLM Based Apps', 'Cold-Outreach', 'Vibe Coding', 'Arduino', 'Azure','Sensors'].map((skill) => (
                 <span key={skill} className="px-3 py-1 bg-card text-sm rounded-full font-jura">

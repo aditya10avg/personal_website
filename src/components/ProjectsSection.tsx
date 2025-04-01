@@ -68,32 +68,31 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-12 bg-background">
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">Projects</h2>
             <Separator className="w-12" />
-            <p className="mt-6 text-muted-foreground font-jura">
+            <p className="mt-4 text-muted-foreground font-jura">
               A collection of innovative projects spanning AI, healthcare, and technology, focused on solving real-world problems.
             </p>
           </div>
           
           <div className="lg:col-span-8">
-            <div className="space-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {projects.map((project) => (
                 <div 
                   key={project.id}
                   className={cn(
-                    "rounded-lg transition-all p-6",
-                    project.image ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "flex flex-col",
+                    "rounded-lg transition-all p-4",
                     activeProject === project.id ? "bg-card shadow-sm" : "hover:bg-card/50"
                   )}
                   onMouseEnter={() => setActiveProject(project.id)}
                   onMouseLeave={() => setActiveProject(null)}
                 >
                   {project.image && (
-                    <div className="aspect-video bg-muted rounded-md overflow-hidden">
+                    <div className="aspect-video bg-muted rounded-md overflow-hidden mb-4">
                       <img 
                         src={imageError[project.id] ? '/placeholder.svg' : project.image} 
                         alt={project.title} 
@@ -103,7 +102,7 @@ const ProjectsSection = () => {
                     </div>
                   )}
                   <div className="flex flex-col">
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-jura font-medium">{project.title}</h3>
                       <a 
                         href={project.link} 
@@ -114,7 +113,7 @@ const ProjectsSection = () => {
                         View Project <ArrowUpRightIcon className="ml-1 h-4 w-4" />
                       </a>
                     </div>
-                    <p className="text-muted-foreground mb-4 font-jura">{project.description}</p>
+                    <p className="text-muted-foreground mb-3 font-jura text-sm">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.map((tag) => (
                         <span key={tag} className="text-xs font-jura px-2 py-1 bg-secondary rounded-full">
