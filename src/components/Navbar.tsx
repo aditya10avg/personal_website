@@ -1,9 +1,13 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Switch } from "@/components/ui/switch";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -28,25 +32,13 @@ const Navbar = () => {
         <a href="#home" className="text-lg font-jura font-medium">
           YourName
         </a>
-        <nav>
-          <ul className="flex items-center gap-8">
-            <li>
-              <a href="#about" className="text-sm font-jura hover:text-black/70 transition-colors">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="text-sm font-jura hover:text-black/70 transition-colors">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="text-sm font-jura hover:text-black/70 transition-colors">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className="flex items-center gap-2">
+          {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
+          <Switch 
+            checked={theme === "dark"}
+            onCheckedChange={toggleTheme}
+          />
+        </div>
       </div>
     </header>
   );
