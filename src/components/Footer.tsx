@@ -9,29 +9,29 @@ const Footer = () => {
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <p className="font-display font-medium">YourName</p>
-            <p className="text-sm text-muted-foreground mt-1">© {currentYear}. All rights reserved.</p>
+            <p className="font-jura font-medium">YourName</p>
+            <p className="text-sm font-jura text-muted-foreground mt-1">© {currentYear}. All rights reserved.</p>
           </div>
           
           <nav>
             <ul className="flex items-center gap-6">
               <li>
-                <a href="#home" className="text-sm hover:text-primary/70 transition-colors">
+                <a href="#home" className="text-sm font-jura hover:text-primary/70 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-sm hover:text-primary/70 transition-colors">
+                <a href="#about" className="text-sm font-jura hover:text-primary/70 transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-sm hover:text-primary/70 transition-colors">
+                <a href="#projects" className="text-sm font-jura hover:text-primary/70 transition-colors">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-sm hover:text-primary/70 transition-colors">
+                <a href="#contact" className="text-sm font-jura hover:text-primary/70 transition-colors">
                   Contact
                 </a>
               </li>
@@ -41,7 +41,7 @@ const Footer = () => {
         
         <Separator className="my-8" />
         
-        <p className="text-xs text-muted-foreground">
+        <p className="text-xs font-jura text-muted-foreground">
           Built with React, TypeScript, and Tailwind CSS.
         </p>
       </div>

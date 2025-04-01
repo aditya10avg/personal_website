@@ -48,9 +48,9 @@ const ProjectsSection = () => {
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-4">
-            <h2 className="text-xl font-display tracking-tight mb-2">Projects</h2>
+            <h2 className="text-xl font-jura tracking-tight mb-2">Projects</h2>
             <Separator className="w-12" />
-            <p className="mt-6 text-muted-foreground">
+            <p className="mt-6 text-muted-foreground font-jura">
               A selection of projects I've worked on, spanning from web applications to design systems.
             </p>
           </div>
@@ -75,18 +75,18 @@ const ProjectsSection = () => {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-lg font-medium mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <h3 className="text-lg font-jura font-medium mb-2">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4 font-jura">{project.description}</p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="text-xs px-2 py-1 bg-secondary rounded-full">
+                        <span key={tag} className="text-xs font-jura px-2 py-1 bg-secondary rounded-full">
                           {tag}
                         </span>
                       ))}
                     </div>
                     <a 
                       href={project.link} 
-                      className="mt-auto inline-flex items-center text-sm font-medium hover:text-primary/70 transition-colors"
+                      className="mt-auto inline-flex items-center text-sm font-jura font-medium hover:text-primary/70 transition-colors"
                     >
                       View Project <ArrowUpRightIcon className="ml-1 h-4 w-4" />
                     </a>

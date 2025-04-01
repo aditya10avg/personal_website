@@ -25,23 +25,23 @@ const Navbar = () => {
       )}
     >
       <div className="container max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#home" className="text-lg font-display font-medium">
+        <a href="#home" className="text-lg font-jura font-medium">
           YourName
         </a>
         <nav>
           <ul className="flex items-center gap-8">
             <li>
-              <a href="#about" className="text-sm hover:text-black/70 transition-colors">
+              <a href="#about" className="text-sm font-jura hover:text-black/70 transition-colors">
                 About
               </a>
             </li>
             <li>
-              <a href="#projects" className="text-sm hover:text-black/70 transition-colors">
+              <a href="#projects" className="text-sm font-jura hover:text-black/70 transition-colors">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className="text-sm hover:text-black/70 transition-colors">
+              <a href="#contact" className="text-sm font-jura hover:text-black/70 transition-colors">
                 Contact
               </a>
             </li>
