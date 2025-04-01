@@ -1,15 +1,14 @@
-
 import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-12 bg-secondary">
+    <footer className="py-12 bg-background">
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <p className="font-jura font-medium">YourName</p>
+            <p className="font-jura font-medium">Aditya</p>
             <p className="text-sm font-jura text-muted-foreground mt-1">© {currentYear}. All rights reserved.</p>
           </div>
           
@@ -42,7 +41,7 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <p className="text-xs font-jura text-muted-foreground">
-          Built with React, TypeScript, and Tailwind CSS.
+          
         </p>
       </div>
     </footer>

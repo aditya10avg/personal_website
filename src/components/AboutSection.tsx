@@ -1,4 +1,3 @@
-
 import { Separator } from "@/components/ui/separator";
 
 const AboutSection = () => {
@@ -13,44 +12,43 @@ const AboutSection = () => {
           
           <div className="lg:col-span-8">
             <p className="text-lg mb-6 font-jura">
-              I'm a [Your Role] with [X years] of experience in [Your Industry]. 
-              I specialize in [Your Specialization] and have a passion for 
-              [Something You're Passionate About].
+              I'm a Aditya. I love building products that help people.
+              I mostly work on AI apps, tools and products with AI capabilities.
             </p>
             <p className="text-lg mb-6 font-jura">
-              My background includes [brief background - education/career highlights]. 
-              I've worked with [notable clients/companies] to deliver [results/products].
+              I am currently building a startup called Calley AI <a href="https://calleyai.tech" target="_blank" rel="noopener noreferrer">calleyai.tech</a>
+              I've worked on many small and large projects. The number goes above 50
             </p>
             <p className="text-lg font-jura">
-              Currently, I'm focused on [current focus/interests]. When I'm not working,
-              you can find me [personal interests/hobbies].
+              Currently, I'm focused on Calley AI. When I'm not working,
+              you can find me roaming in some random park/garden.
             </p>
             
             <h3 className="font-jura text-lg mt-12 mb-4">Experience</h3>
             <div className="space-y-8">
               <div>
                 <div className="flex justify-between items-baseline mb-2">
-                  <h4 className="font-jura font-medium">Senior [Your Role]</h4>
-                  <span className="text-sm font-jura text-muted-foreground">2020 - Present</span>
+                  <h4 className="font-jura font-medium">Check my linkedin for my experience</h4>
+                  <span className="text-sm font-jura text-muted-foreground"></span>
                 </div>
-                <p className="text-muted-foreground font-jura">[Company Name]</p>
-                <p className="mt-2 font-jura">Brief description of your responsibilities and achievements.</p>
+                <p className="text-muted-foreground font-jura"></p>
+                <p className="mt-2 font-jura"></p>
               </div>
               
               <div>
                 <div className="flex justify-between items-baseline mb-2">
-                  <h4 className="font-jura font-medium">[Previous Role]</h4>
-                  <span className="text-sm font-jura text-muted-foreground">2017 - 2020</span>
+                  <h4 className="font-jura font-medium"></h4>
+                  <span className="text-sm font-jura text-muted-foreground"></span>
                 </div>
-                <p className="text-muted-foreground font-jura">[Previous Company]</p>
-                <p className="mt-2 font-jura">Brief description of your responsibilities and achievements.</p>
+                <p className="text-muted-foreground font-jura"></p>
+                <p className="mt-2 font-jura"></p>
               </div>
             </div>
             
             <h3 className="font-jura text-lg mt-12 mb-4">Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {['Skill 1', 'Skill 2', 'Skill 3', 'Skill 4', 'Skill 5', 'Skill 6'].map((skill) => (
-                <span key={skill} className="px-3 py-1 bg-secondary text-sm rounded-full font-jura">
+              {['Python', 'AI agents', 'LLM Based Apps', 'Cold-Outreach', 'Vibe Coding', 'Arduino', 'Azure','Sensors'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-card text-sm rounded-full font-jura">
                   {skill}
                 </span>
               ))}

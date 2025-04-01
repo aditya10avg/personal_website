@@ -1,4 +1,3 @@
-
 import { Separator } from "@/components/ui/separator";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
@@ -7,22 +6,22 @@ const ContactSection = () => {
     {
       name: "GitHub",
       icon: Github,
-      link: "https://github.com/yourusername",
+      link: "http://github.com/aditya10avg",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      link: "https://linkedin.com/in/yourusername",
+      link: "https://www.linkedin.com/in/aditya-gayakwad-ba993026a/",
     },
     {
       name: "Twitter",
       icon: Twitter,
-      link: "https://twitter.com/yourusername",
+      link: "https://x.com/avg_aditya",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      link: "https://instagram.com/yourusername",
+      link: "https://www.instagram.com/adiitya_g10/",
     },
   ];
 
@@ -42,8 +41,8 @@ const ContactSection = () => {
             
             <div className="mb-12">
               <h3 className="text-lg font-jura font-medium mb-4">Get in touch</h3>
-              <a href="mailto:your.email@example.com" className="text-lg font-jura hover:text-primary/70 transition-colors">
-                your.email@example.com
+              <a href="mailto:adityavg1005@gmail.com" className="text-lg font-jura hover:text-primary/70 transition-colors">
+                adityavg1005@gmail.com
               </a>
             </div>
             

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Switch } from "@/components/ui/switch";
@@ -30,7 +29,7 @@ const Navbar = () => {
     >
       <div className="container max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#home" className="text-lg font-jura font-medium">
-          YourName
+          Aditya
         </a>
         <div className="flex items-center gap-2">
           {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}

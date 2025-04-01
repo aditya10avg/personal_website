@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
@@ -16,42 +15,71 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Project One",
-    description: "A brief description of your first project and what technologies you used.",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    link: "#",
-    image: "/placeholder.svg",
+    title: "Calley AI",
+    description: "An AI cold calling agent that autonomously calls potential leads, interacts naturally, and qualifies leads by scheduling meetings with the sales team when interest is detected.",
+    tags: ["AI", "Voice AI", "Cold Calling", "Sales Automation"],
+    link: "https://youtu.be/K0pzPqWGrfU?si=XW7YWPuMPW3J5C_G",
+    image: "/images/projects/calley-ai.png",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "A brief description of your second project and what problem it solved.",
-    tags: ["Next.js", "Node.js", "MongoDB"],
-    link: "#",
+    title: "VoiceDoc - Parkinson's Detection",
+    description: "A machine learning model that detects Parkinson's disease symptoms by analyzing voice features including tone, jitters, and pitch variations.",
+    tags: ["Machine Learning", "Healthcare", "Voice Analysis"],
+    link: "https://github.com/aditya10avg/voice_doc",
     image: "/placeholder.svg",
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "A brief description of your third project and its impact.",
-    tags: ["React Native", "Firebase", "Redux"],
-    link: "#",
+    title: "Protect - Scam Detection",
+    description: "An LLM-powered software that protects users from financial scams by analyzing speech patterns and technical terminology used in conversations.",
+    tags: ["LLM", "Security", "Pattern Recognition"],
+    link: "https://github.com/aditya10avg/Protect",
     image: "/placeholder.svg",
   },
+  {
+    id: 4,
+    title: "Parkinson's Detection Wearable",
+    description: "A watch-like wearable device that monitors and analyzes hand tremors to detect potential Parkinson's symptoms through frequency and amplitude analysis.",
+    tags: ["IoT", "Healthcare", "Sensors", "Wearable Tech"],
+    link: "#",
+    image: "/images/projects/parkinsons-wearable.png",
+  },
+  {
+    id: 5,
+    title: "Quantum Chemistry Neural Network",
+    description: "Using Graph Neural Networks and Message Passing Neural Networks to predict quantum properties of organic molecules, aiding in drug discovery.",
+    tags: ["Neural Networks", "Quantum Chemistry", "Drug Discovery"],
+    link: "https://github.com/aditya10avg/MPNN-for-Quantum-Biochemistry",
+    image: "/placeholder.svg",
+  },
+  {
+    id: 6,
+    title: "Pixie Style Transformer",
+    description: "An open-source image-to-art generator that transforms images into specific art styles. Gained over 700 users within 24 hours of launch.",
+    tags: ["AI", "Image Processing", "Art Generation"],
+    link: "https://github.com/aditya10avg/pixie-style-transformer",
+    image: "/placeholder.svg",
+  }
 ];
 
 const ProjectsSection = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const [imageError, setImageError] = useState<{[key: number]: boolean}>({});
+
+  const handleImageError = (projectId: number) => {
+    setImageError(prev => ({...prev, [projectId]: true}));
+  };
 
   return (
-    <section id="projects" className="py-24 bg-secondary">
+    <section id="projects" className="py-24 bg-background">
       <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">Projects</h2>
             <Separator className="w-12" />
             <p className="mt-6 text-muted-foreground font-jura">
-              A selection of projects I've worked on, spanning from web applications to design systems.
+              A collection of innovative projects spanning AI, healthcare, and technology, focused on solving real-world problems.
             </p>
           </div>
           
@@ -69,9 +97,10 @@ const ProjectsSection = () => {
                 >
                   <div className="aspect-video bg-muted rounded-md overflow-hidden">
                     <img 
-                      src={project.image} 
+                      src={imageError[project.id] ? '/placeholder.svg' : project.image} 
                       alt={project.title} 
                       className="w-full h-full object-cover"
+                      onError={() => handleImageError(project.id)}
                     />
                   </div>
                   <div className="flex flex-col">
@@ -86,6 +115,8 @@ const ProjectsSection = () => {
                     </div>
                     <a 
                       href={project.link} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="mt-auto inline-flex items-center text-sm font-jura font-medium hover:text-primary/70 transition-colors"
                     >
                       View Project <ArrowUpRightIcon className="ml-1 h-4 w-4" />
