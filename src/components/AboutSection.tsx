@@ -2,9 +2,9 @@ import { Separator } from "@/components/ui/separator";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12">
-      <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <section id="about" className="py-16">
+      <div className="container max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">About Me</h2>
             <Separator className="w-12" />

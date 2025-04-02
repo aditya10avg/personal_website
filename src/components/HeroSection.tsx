@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center pt-20">
-      <div className="container max-w-6xl mx-auto px-4 md:px-6">
+    <section id="home" className="min-h-[85vh] flex flex-col justify-center">
+      <div className="container max-w-6xl mx-auto px-4">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-jura font-semibold tracking-tight opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Hi, I'm Aditya.

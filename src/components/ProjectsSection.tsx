@@ -68,24 +68,24 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-12 bg-background">
-      <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <section id="projects" className="py-16 bg-background">
+      <div className="container max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">Projects</h2>
             <Separator className="w-12" />
-            <p className="mt-4 text-muted-foreground font-jura">
+            <p className="mt-2 text-muted-foreground font-jura">
               A collection of innovative projects spanning AI, healthcare, and technology, focused on solving real-world problems.
             </p>
           </div>
           
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {projects.map((project) => (
                 <div 
                   key={project.id}
                   className={cn(
-                    "rounded-lg transition-all p-4",
+                    "rounded-lg transition-all p-3",
                     activeProject === project.id ? "bg-card shadow-sm" : "hover:bg-card/50"
                   )}
                   onMouseEnter={() => setActiveProject(project.id)}

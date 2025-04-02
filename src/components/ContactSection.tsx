@@ -26,20 +26,20 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24">
-      <div className="container max-w-6xl mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+    <section id="contact" className="py-16">
+      <div className="container max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-4">
             <h2 className="text-xl font-jura tracking-tight mb-2">Contact</h2>
             <Separator className="w-12" />
           </div>
           
           <div className="lg:col-span-8">
-            <p className="text-lg mb-8 font-jura">
+            <p className="text-lg mb-4 font-jura">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             
-            <div className="mb-12">
+            <div className="mb-6">
               <h3 className="text-lg font-jura font-medium mb-4">Get in touch</h3>
               <a href="mailto:adityavg1005@gmail.com" className="text-lg font-jura hover:text-primary/70 transition-colors">
                 adityavg1005@gmail.com
