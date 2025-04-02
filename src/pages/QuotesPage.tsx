@@ -13,7 +13,7 @@ const quotes = [
     text: "Your real resume is the catalogue of all your sufferings.", 
   },
   {
-    text: "Any freedom that desires for more freedom is not a freedom.",
+    text: "Any freedom that desires for more freedom is not a freedom.",
   },
   {
     text: "The only way to do great work is to love what you do.",
@@ -46,13 +46,13 @@ const quotes = [
     text: "There is no prescription to do great things. But there is for normal work. You can't do great things by just following the prescription/roadmap.",
   },
   {
-    text: "Innovation is the child of freedom and parent of prosperity.",
+    text: "Innovation is the child of freedom and parent of prosperity.",
   },
   {
     text: "The goal of education is to teach a person to think and reason, not to simply load the memory with thoughts of other men.",
   },
   {
-    text: "Education is not the learning of facts, but the training of the mind to think.",
+    text: "Education is not the learning of facts, but the training of the mind to think.",
   },
 ];
 
@@ -65,7 +65,7 @@ const QuotesPage = () => {
             Best Quotes I have ever heard
           </h1>
 
-          <div className="space-y-12 text-lg font-jura">
+          <div className="space-y-6 text-lg font-jura">
             {quotes.map((quote, index) => (
               <div 
                 key={index} 

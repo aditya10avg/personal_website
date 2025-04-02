@@ -22,7 +22,7 @@ const HeroSection = () => {
 
         <div className="ml-0 md:-ml-4">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-jura font-semibold tracking-tight mb-8">
-            <AnimatedHeading text="Aditya" />
+            Aditya
           </h1>
 
           <div className="space-y-6">
