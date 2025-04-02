@@ -1,3 +1,18 @@
+const quotes = [
+  {
+    text: "Impatience with action and patience with result.",
+    author: "Aditya"
+  },
+  {
+    text: "Humans are dynamic, there are times a person might be introvert, there are times a person might be an extrovert, there will be a context in which you will be pessimistic and there will be a context in which you will be optimistic.",
+    author: "Aditya"
+  },
+  {
+    text: "When you fail there are infinite - 1 more opportunities i.e. Infinite more opportunities.",
+    author: "Aditya"
+  }
+];
+
 const QuotesPage = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -7,11 +22,16 @@ const QuotesPage = () => {
             Best Quotes I have ever heard
           </h1>
 
-          <div className="space-y-8 text-lg font-jura">
-            <p className="hover:text-primary/70 transition-colors">
-              "The only way to do great work is to love what you do." - Steve Jobs
-            </p>
-            {/* Add more quotes here */}
+          <div className="space-y-12 text-lg font-jura">
+            {quotes.map((quote, index) => (
+              <div 
+                key={index} 
+                className="p-6 bg-card/50 rounded-lg hover:bg-card/80 transition-colors"
+              >
+                <p className="mb-4 leading-relaxed">"{quote.text}"</p>
+                <p className="text-primary text-sm">- {quote.author}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@ const QuotesSection = () => {
           <h2 className="text-3xl font-jura font-semibold mb-6">
             <a 
               href="/quotes" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary/70 transition-colors"
             >
               Best Quotes I have ever heard →

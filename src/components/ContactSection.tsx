@@ -24,6 +24,11 @@ const ContactSection = () => {
       icon: Instagram,
       link: "https://www.instagram.com/adiitya_g10/",
     },
+    {
+      name: "Threads",
+      icon: Instagram,
+      link: "https://www.threads.net/@adiitya_g10",
+    },
   ];
 
   return (
