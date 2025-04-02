@@ -9,7 +9,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-[50vh] flex flex-col justify-center">
-      <div className="container max-w-6xl mx-auto px-0">
+      <div className="container max-w-6xl mx-auto px-4 md:px-0">
         <div className="flex justify-end mb-8">
           <div className="flex items-center gap-2">
             {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
@@ -20,7 +20,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="-ml-4">
+        <div className="ml-0 md:-ml-4">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-jura font-semibold tracking-tight mb-8">
             <AnimatedHeading text="Aditya" />
           </h1>

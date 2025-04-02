@@ -74,8 +74,8 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-8 bg-background">
-      <div className="container max-w-6xl mx-auto px-0">
-        <div className="-ml-4">
+      <div className="container max-w-6xl mx-auto px-4 md:px-0">
+        <div className="ml-0 md:-ml-4">
           <AnimatedHeading 
             text="Past   Endeavours"
             tag="h2"

@@ -33,8 +33,8 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-8">
-      <div className="container max-w-6xl mx-auto px-0">
-        <div className="-ml-4">
+      <div className="container max-w-6xl mx-auto px-4 md:px-0">
+        <div className="ml-0 md:-ml-4">
           <AnimatedHeading 
             text="Contact / Socials"
             tag="h2"

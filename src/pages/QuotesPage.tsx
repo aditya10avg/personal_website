@@ -16,8 +16,8 @@ const quotes = [
 const QuotesPage = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="container max-w-6xl mx-auto px-0 py-16">
-        <div className="-ml-4">
+      <div className="container max-w-6xl mx-auto px-4 md:px-0 py-16">
+        <div className="ml-0 md:-ml-4">
           <h1 className="text-3xl font-jura font-semibold mb-12">
             Best Quotes I have ever heard
           </h1>
@@ -26,9 +26,9 @@ const QuotesPage = () => {
             {quotes.map((quote, index) => (
               <div 
                 key={index} 
-                className="p-6 bg-card/50 rounded-lg hover:bg-card/80 transition-colors"
+                className="p-4 md:p-6 bg-card/50 rounded-lg hover:bg-card/80 transition-colors"
               >
-                <p className="mb-4 leading-relaxed">"{quote.text}"</p>
+                <p className="mb-4 leading-relaxed text-base md:text-lg">"{quote.text}"</p>
                 <p className="text-primary text-sm">- {quote.author}</p>
               </div>
             ))}
