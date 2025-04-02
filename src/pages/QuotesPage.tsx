@@ -65,14 +65,13 @@ const QuotesPage = () => {
             Best Quotes I have ever heard
           </h1>
 
-          <div className="space-y-6 text-lg font-jura">
+          <div className="space-y-2 text-lg font-jura">
             {quotes.map((quote, index) => (
               <div 
                 key={index} 
-                className="p-4 md:p-6 bg-card/50 rounded-lg hover:bg-card/80 transition-colors"
+                className="p-4 bg-transparent"
               >
-                <p className="mb-4 leading-relaxed text-base md:text-lg">"{quote.text}"</p>
-                <p className="text-primary text-sm">- {quote.author}</p>
+                <p className="text-base md:text-lg">"{quote.text}"</p>
               </div>
             ))}
           </div>
