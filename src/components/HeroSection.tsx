@@ -29,7 +29,7 @@ const HeroSection = () => {
             <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-primary opacity-30 animate-matrix-effect"></div>
             
             <p className="text-lg font-jura">
-              I just wanna bring a significant change. I built solutions to real world problems. Might be a future tech leader.
+              I just wanna bring a significant change. I love building solutions to real world problems. I might be a future tech leader.
             </p>
 
             <p className="text-lg font-jura">
