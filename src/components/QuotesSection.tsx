@@ -1,17 +1,19 @@
+import { Link } from 'react-router-dom';
+
 const QuotesSection = () => {
   return (
     <section id="quotes" className="py-8">
       <div className="container max-w-6xl mx-auto px-0">
         <div className="-ml-4">
           <h2 className="text-3xl font-jura font-semibold mb-6">
-            <a 
-              href="/quotes" 
+            <Link 
+              to="/quotes"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary/70 transition-colors"
             >
               Best Quotes I have ever heard →
-            </a>
+            </Link>
           </h2>
         </div>
       </div>
