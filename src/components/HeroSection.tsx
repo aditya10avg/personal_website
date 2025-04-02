@@ -1,25 +1,51 @@
-import { ArrowDownIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { useTheme } from "@/hooks/useTheme";
+import AnimatedText from './AnimatedText';
+import AnimatedHeading from './AnimatedHeading';
 
 const HeroSection = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <section id="home" className="min-h-[85vh] flex flex-col justify-center">
-      <div className="container max-w-6xl mx-auto px-4">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-jura font-semibold tracking-tight opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Hi, I'm Aditya.
+    <section id="home" className="min-h-[50vh] flex flex-col justify-center">
+      <div className="container max-w-6xl mx-auto px-0">
+        <div className="flex justify-end mb-8">
+          <div className="flex items-center gap-2">
+            {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
+            <Switch 
+              checked={theme === "dark"}
+              onCheckedChange={toggleTheme}
+            />
+          </div>
+        </div>
+
+        <div className="-ml-4">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-jura font-semibold tracking-tight mb-8">
+            <AnimatedHeading text="Aditya" />
           </h1>
-          <p className="text-lg md:text-xl mt-6 text-muted-foreground opacity-0 animate-fade-in max-w-2xl font-jura" style={{ animationDelay: '0.5s' }}>
-            I just wanna bring a significant change. I built solutions to real world problems. Might be a future tech leader.
-          </p>
-          
-          <div className="mt-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <Button asChild variant="outline" size="lg" className="group font-jura">
-              <a href="#about">
-                Explore more
-                <ArrowDownIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-              </a>
-            </Button>
+
+          <div className="space-y-6">
+            <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-primary opacity-30 animate-matrix-effect"></div>
+            
+            <p className="text-lg font-jura">
+              I just wanna bring a significant change. I built solutions to real world problems. Might be a future tech leader.
+            </p>
+
+            <p className="text-lg font-jura">
+              I'm a Aditya. I love building products that help people.
+              I mostly work on AI apps, tools and products with AI capabilities.
+            </p>
+
+            <p className="text-lg font-jura">
+              I am currently building a startup called Calley AI <a href="https://calleyai.tech" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">calleyai.tech</a>.
+              I've worked on many small and large projects. The number goes above 50.
+            </p>
+
+            <p className="text-lg font-jura">
+              Currently, I'm focused on Calley AI. When I'm not working,
+              you can find me roaming in some random park/garden.
+            </p>
           </div>
         </div>
       </div>
