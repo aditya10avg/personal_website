@@ -54,6 +54,13 @@ const quotes = [
   {
     text: "Education is not the learning of facts, but the training of the mind to think.",
   },
+  {
+    text: "Communication is a form of respect and if you respect that person then you will get back to him/her asap.",
+  },
+  {
+    text: "Stress comes due to two conflicting desires.",
+  },
+ 
 ];
 
 const QuotesPage = () => {

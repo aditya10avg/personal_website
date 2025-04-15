@@ -38,7 +38,7 @@ const HeroSection = () => {
             </p>
 
             <p className="text-lg font-jura">
-              I am currently building a startup called Calley AI <a href="https://calleyai.tech" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">calleyai.tech</a>.
+              I am currently building a startup called  <a href="https://calleyai.tech" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">Calley AI</a>.
               I've worked on many small and large projects. The number goes above 50.
             </p>
 
