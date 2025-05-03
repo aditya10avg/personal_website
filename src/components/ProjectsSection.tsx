@@ -15,6 +15,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    id: 0,
+    title: "Homework Arbitrage",
+    description: "Built a mini-business by outsourcing homework from one group and selling it at a higher price to another group. Turned academic hustle into profit—my first taste of entrepreneurship.",
+    tags: ["Entrepreneurship", "Hustle", "Arbitrage", "Flex"],
+    link: "#", // No link needed, or you can remove this property
+    // No image for this one
+  },
+  {
     id: 1,
     title: "Calley AI",
     description: "An AI cold calling agent that autonomously calls potential leads, interacts naturally, and qualifies leads by scheduling meetings with the sales team when interest is detected.",
