@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     id: 0,
     title: "Homework Arbitrage",
-    description: "Built a mini-business by outsourcing homework from one group and selling it at a higher price to another group. Turned academic hustle into profit—my first taste of entrepreneurship.",
+    description: "Built a mini-business by outsourcing homework from one group and selling it at a higher price to another group. Turned academic hustle into profit.",
     tags: ["Entrepreneurship", "Hustle", "Arbitrage", "Flex"],
     link: "#", // No link needed, or you can remove this property
     // No image for this one
